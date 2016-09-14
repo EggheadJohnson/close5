@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  </head>
+  <body>
+    <h1> Close5 Coding Challenge </h1>
+	<h2> REST API Methods </h2>
+	<h3> Get methods </h3>
+	<ul>
+		<li> <b> <a href="/date?sortOrder=oldest"> /date?sortOrder={oldest, newest} </a> </b> - return the items listed in date order either oldest first or newest first
+			<ul>
+				<li> Errors on: </li>
+				<ul>
+					<li> sortOrder neither of "oldest" or "newest"</li>
+				</ul>
+			</ul>
+		</li>
+		<li> <b> <a href="/price?sortOrder=lowest"> /price?sortOrder={highest, lowest} </a> </b> - return the items listed in price order either highest first or lowest first
+			<ul>
+				<li> Errors on: </li>
+				<ul>
+					<li> sortOrder neither of "highest" or "lowest"</li>
+				</ul>
+			</ul>
+		</li>
+		<li> <b> <a href="/item/53fbb9b6456e74467b000004"> /item/{itemID} </a> </b> - return a single item with the ID sent or blank if no item was found with that ID
+			<ul>
+				<li> Errors on: </li>
+				<ul>
+					<li> Item not found </li>
+				</ul>
+			</ul>
+		</li>
+		<li> <b> <a href="/getByUser/5400f55c7b7b598d61000004"> /getByUser/{userID} </a> </b> - return a list of items that the user represented by userID is selling or an empty array if no items or no user is found
+			<ul>
+				<li> Errors on: </li>
+				<ul>
+					<li> user not found or has nothing for sale </li>
+				</ul>
+			</ul>
+		</li>
+		<li> <b> <a href="/getByLocation?lat=37.790159&lon=-122.394587"> /getByLocation?lat={latitude}&lon={longitude} </a> </b> - return a list of items which can be found within 50 miles of the latitude and longitude passed in
+			<ul>
+				<li> Errors on: </li>
+				<ul>
+					<li> latitude and/or longitude missing </li>
+				</ul>
+			</ul>
+		</li>
+	</ul>
+	<h2> Queries Available on All* End Points </h2>
+	<h4> *Except /item </h4>
+	<ul>
+		<li> <b> ?limit={maximum} </b> - limit the number of results returned </li>
+		<li> <b> ?status={tos, removed} </b> - limit the results returned to items with either a status of tos or removed </li>
+	</ul>
+
+
+  </body>
+</html>

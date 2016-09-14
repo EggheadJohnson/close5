@@ -1,0 +1,11 @@
+{
+  "name": "close5",
+  "version": "1.0.0",
+  "description": "Sample server to interact with sample Close5 data",
+  "main": "app.js",
+  "author": "Paul Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
